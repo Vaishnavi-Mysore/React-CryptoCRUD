@@ -1,0 +1,81 @@
+.login-board {
+  opacity: 30%;
+}
+.logincss {
+  background-image: radial-gradient(#296ed6 15%, #23233F 80%);
+  padding-top: 5%;
+  height: 100vh;
+  display: flex;
+  align-items: center !important;
+  flex-direction:row  !important;
+}
+
+#frmLogin {
+  .form-group {
+    padding: 0 15%;
+  }
+}
+
+.center-text {
+  text-align: center;
+}
+
+.login-hr {
+  box-sizing: border-box;
+  height: 2px;
+  width: 100%;
+  border: 1px solid #b3a369;
+}
+
+.row-margin {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+@media screen and(max-width : 600px) {
+  .row-margin {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+.currency-pay-header {
+  color: #505355;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.38px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.currency-pay-body {
+  opacity: 0.87;
+  color: #444547;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+}
+
+.login-link {
+  color: #0091c8;
+  font-size: 16px;
+  letter-spacing: 0.33px;
+  line-height: 18px;
+}
+.login-button {
+  color: #ffffff;
+  font-size: 17px;
+  letter-spacing: 0.53px;
+  line-height: 19px;
+  height: 40px;
+  width: 192px;
+  border-radius: 4px;
+  background-color:#3582f5;
+}
+.login-text {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 27px;
+  text-align: center;
+}

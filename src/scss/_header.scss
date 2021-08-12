@@ -1,0 +1,22 @@
+.onBehalfLogin-block {
+  z-index: 2;
+  background-color: #b3a369;
+  float: right;
+  padding: 15px;
+}
+.onBehalfLogin-msg {
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0.29px;
+  text-align: right;
+}
+
+@media screen and(max-width : 600px) {
+  .onBehalfLogin-block {
+    z-index: 2;
+    padding: 5px;
+  }
+  .onBehalfLogin-msg {
+    font-size: 10px;
+  }
+}

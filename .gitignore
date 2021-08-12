@@ -1,0 +1,9 @@
+.editorconfig
+.env
+.vscode
+build
+coverage
+node_modules
+
+# this should not always be ignored!
+package-lock.json

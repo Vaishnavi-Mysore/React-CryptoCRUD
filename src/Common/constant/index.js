@@ -1,0 +1,17 @@
+export const MESSAGE = {
+  TOAST_INTERVAL: 5000,
+  INVALID_LOGIN: 'Invalid Login',
+  OPPS_ERROR: 'Oops something went wrong',
+  PROCESSOR_DELETED: 'Processor has been deleted successfully',
+  PROCESSOR_CREATED: 'Processor has been created successfully',
+  PROCESSOR_MODIFY: 'Processor has been modified successfully',
+  GROUP_MODIFY: 'Group has been modified successfully',
+  GROUP_CREATED: 'Group has been created sucessfully',
+  GROUP_DELETED: 'Group has been deleted sucessfully',
+  RULE_DELETED: 'Rule has been deleted successfully',
+  RULE_CREATED: 'Rule has been created successfully',
+  RULE_MODIFY: 'Rule has been modified successfully',
+  MERCHANT_CREATED: 'Merchant has been created sucessfully',
+  MERCHANT_MODIFY: 'Merchant has been modified successfully',
+  MERCHANT_DELETED: 'Merchant has been deleted sucessfully',
+};

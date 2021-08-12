@@ -1,0 +1,117 @@
+.rectangle-copy-3 {
+  margin-top: 1%;
+  margin-left: 15px;
+  height: auto;
+  width: 418px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.13), 0 2px 2px -1px rgba(0, 0, 0, 0.11), 0 1px 5px 0 rgba(0, 0, 0, 0.18);
+}
+
+.title {
+  margin-top: 10px;
+  margin-left: 2%;
+  color: #444547;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.sales-activity-sub {
+  color: #444547;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.view-all {
+  margin-top: 15px;
+  opacity: 0.87;
+  color: #0091c8;
+  cursor: pointer;
+  text-align: right;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.fa-angle-right {
+  color: #0091c8;
+  font-family: "Font Awesome 5 Pro";
+  font-size: 14px;
+  padding: 0.25rem;
+  font-weight: "normal";
+  text-align: center;
+}
+
+.rectangle-copy-5 {
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 15px;
+  height: auto;
+  width: 100%;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.13), 0 2px 2px -1px rgba(0, 0, 0, 0.11), 0 1px 5px 0 rgba(0, 0, 0, 0.18);
+}
+
+.progress-value-copy-8 {
+  opacity: 0.65;
+  color: #444547;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  margin-left: 6%;
+  margin-bottom: 0px;
+}
+
+.cents {
+  font-size: 0.5em;
+  position: relative;
+  bottom: 0.7em;
+}
+
+.chartjs-tooltip .tooltip-header-item {
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.chartjs-tooltip .tooltip-body-item,
+.chartjs-tooltip .tooltip-body-item-value {
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+#recentdepositlist {
+  .labelwrap {
+    max-width: 65px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+.margin-right {
+  margin-right: 15px;
+}
+@media only screen and (max-width: 600px) {
+  .rectangle-copy-5 {
+    margin-right: 0px;
+    margin-top: 0px;
+    width: 105%;
+    box-shadow: none;
+  }
+  .rectangle-copy-3 {
+    margin-top: 0%;
+    margin-left: 0px;
+    margin-right: 0px;
+    box-shadow: none;
+  }
+  .margin-right {
+    margin-right: 0px;
+  }
+ 
+}
+.negative-amount-color{
+  color: #e1523c;
+}

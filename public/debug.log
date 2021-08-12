@@ -1,0 +1,5 @@
+[1118/143937.677:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[1118/144111.417:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[1118/144342.586:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[1118/144912.284:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[1118/151827.202:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: The pipe has been ended. (0x6D)

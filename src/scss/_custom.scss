@@ -1,0 +1,1550 @@
+@import "./footer";
+@import "./layout";
+@import "./loader";
+@import "./login";
+@import "./dashboard";
+@import "./input";
+@import "./header";
+body {
+  font-family: "canada-type-gibson";
+  font-weight: normal;
+}
+
+.container,
+.main {
+  .container-fluid {
+    padding: 0 15px;
+  }
+  padding: 0;
+}
+i.icon.pointing > {
+  .right:before {
+    content: "\f0a4";
+  }
+  .left:before {
+    content: "\f0a5";
+  }
+  .up:before {
+    content: "\f0a6";
+  }
+  .down:before {
+    content: "\f0a7";
+  }
+}
+.ui > {
+  .basic.pointing.label:before {
+    border-color: inherit;
+  }
+  .pointing.label,
+  .attached.pointing.label {
+    position: absolute;
+  }
+  .pointing.label:before {
+    background-color: inherit;
+    border-style: solid;
+    border-color: inherit;
+    position: absolute;
+    content: "";
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-image: none;
+    z-index: 2;
+    width: 0.6666em;
+    height: 0.6666em;
+    -webkit-transition: background 0.1s ease;
+    transition: background 0.1s ease;
+  }
+  .pointing.label,
+  [class*="pointing above"].label {
+    margin-top: -14px;
+    z-index: 3;
+  }
+  .pointing.label:before,
+  [class*="pointing above"].label:before {
+    border-width: 1px 0 0 1px;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    top: 0;
+    left: 10%;
+  }
+  [class*="bottom pointing"].label,
+  [class*="pointing below"].label {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+  [class*="bottom pointing"].label:before,
+  [class*="pointing below"].label:before {
+    border-width: 0 1px 1px 0;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    top: 100%;
+    left: 50%;
+  }
+  [class*="left pointing"].label {
+    margin-top: 0;
+    margin-left: 0.6666em;
+    > :before {
+      border-width: 0 0 1px 1px;
+      -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      bottom: auto;
+      right: auto;
+      top: 50%;
+      left: 0;
+    }
+  }
+  [class*="right pointing"].label {
+    margin-top: 0;
+    margin-right: 0.6666em;
+    &:before {
+      border-width: 1px 1px 0 0;
+      -webkit-transform: translateX(50%) translateY(-50%) rotate(45deg);
+      -ms-transform: translateX(50%) translateY(-50%) rotate(45deg);
+      transform: translateX(50%) translateY(-50%) rotate(45deg);
+      top: 50%;
+      right: 0;
+      bottom: auto;
+      left: auto;
+    }
+  }
+  .label {
+    display: inline-block;
+    line-height: 1;
+    vertical-align: baseline;
+    margin: 0 3.5em;
+    background-color: #e8e8e8;
+    background-image: none;
+    padding: 0.5833em 1.833em;
+    color: black;
+    text-transform: none;
+    font-size: 10px;
+    border: 0 solid transparent;
+    border-radius: 0.28571429rem;
+    -webkit-transition: background 0.1s ease;
+    transition: background 0.1s ease;
+    width: -webkit-fill-available;
+  }
+  .basic > {
+    .pointing.label:before {
+      margin-top: -1px;
+    }
+    [class*="left pointing"].label:before {
+      top: 50%;
+      left: -1px;
+    }
+    [class*="right pointing"].label:before {
+      top: 50%;
+      right: -1px;
+    }
+    .red.label {
+      background-color: #f6af34;
+      color: #fff;
+      border-color: #f7a81b;
+      margin-top: -15px;
+      width: 130px;
+      padding-left: -10px;
+    }
+    .label {
+      background: #fff;
+      border: 1px solid rgba(34, 36, 38, 0.15);
+      color: rgba(0, 0, 0, 0.87);
+      box-shadow: none;
+    }
+    [class*="pointing above"].label:before {
+      margin-top: -1px;
+    }
+    [class*="bottom pointing"].label:before,
+    [class*="pointing below"].label:before {
+      bottom: auto;
+      top: 100%;
+      margin-top: 1px;
+    }
+  }
+}
+.bg-primary {
+  background-color: #083650 !important;
+}
+.page-heading {
+  text-align: left;
+  width: auto;
+  color: #003b5c;
+  font-size: 32px;
+  font-weight: 600;
+}
+.heading-divider {
+  box-sizing: border-box;
+  height: 2px;
+  border: 1px solid #c0c7c9;
+  opacity: 0.8;
+}
+.heading-divider-lighter {
+  box-sizing: border-box;
+  height: 1px;
+  border: 1px solid #c0c7c9;
+}
+
+.form-group {
+  position: relative;
+  .palceholder {
+    position: absolute;
+    top: 7px;
+    left: 8px;
+    color: #000;
+    display: none;
+  }
+  label {
+    font-weight: normal;
+    color: #000;
+  }
+  .star {
+    color: red;
+  }
+  &:placeholder-shown {
+    color: red;
+  }
+}
+.requiredspan {
+  color: red;
+  margin-bottom: 10px;
+}
+.badge {
+  font-weight: normal;
+}
+.badge-success {
+  background-color: #06ad4b;
+}
+.card {
+  border: none;
+  .card-header > {
+    background-color: #8dc5ee;
+    h4,
+    h5 {
+      color: #063c5c;
+    }
+  }
+  .card-body {
+    background-color: #fff;
+    padding: 2px;
+  }
+}
+
+.pagination {
+  padding-left: 0;
+  margin: 20px auto;
+  width: fit-content;
+  li {
+    border-right: none;
+    width: fit-content;
+    text-align: center;
+    a {
+      height: 18px;
+      width: 10px;
+      font-size: 16px;
+      line-height: 18px;
+      text-align: center;
+      padding: 4px 8px;
+      text-decoration: none;
+      color: #049beb;
+      cursor: pointer;
+      letter-spacing: 2.71px;
+      -webkit-appearance: none;
+    }
+    &:hover {
+      a {
+        color: #444547;
+        font-weight: 600;
+      }
+    }
+  }
+
+  li.first,
+  li.next,
+  li.previous,
+  li.last {
+    a {
+      color: #0091c8;
+    }
+  }
+  li.disabled {
+    a {
+      opacity: 0.32;
+      color: #505355;
+      cursor: context-menu;
+    }
+  }
+
+  .active {
+    a {
+      opacity: 0.87;
+      color: #fff !important;
+      font-weight: 600;
+      background: #24a0ec;
+    }
+  }
+}
+
+.borderNone {
+  border: none;
+}
+
+.checkboxMargin {
+  margin: 10px;
+}
+.minWidth {
+  min-width: 100px;
+}
+.customRow {
+  margin-bottom: 15px !important;
+}
+#accountSetup {
+  .css-vj8t7z {
+    height: 32px;
+  }
+  .row {
+    div {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 5px;
+}
+
+.hyperlink {
+  cursor: pointer;
+}
+
+.table {
+  .tbody {
+    tr:hover {
+      border: 0px !important;
+    }
+  }
+  width: 99%;
+  td {
+    vertical-align: middle;
+  }
+  thead {
+    height: 44px;
+    border-top: 1px solid #c0c7c9;
+    border-bottom: 2px solid #c0c7c9;
+    tr {
+      height: 44px;
+      th {
+        padding: 5px;
+        border: none;
+        opacity: 0.87;
+        color: #444547;
+        font-size: 16px;
+        font-weight: normal;
+        letter-spacing: 0.56px;
+        vertical-align: middle;
+        .css-10nd86i {
+          width: 198px;
+        }
+        input {
+          width: auto;
+        }
+      }
+    }
+  }
+  .thead-light th {
+    background-color: #8dc5ee;
+  }
+  tbody {
+    tr {
+      height: 54px;
+      border-top: 1px solid #c0c7c9;
+      border-bottom: 1px solid #c0c7c9;
+      &:hover {
+        border-top: none;
+        border-bottom: none;
+        transform: translate(2px, -2px);
+        border-radius: 4px;
+        border: 1px solid #b6bcbe;
+        box-sizing: border-box;
+        box-shadow: rgba(0, 0, 0, 0.13) 0 2px 12px 0;
+      }
+      td {
+        color: #444547;
+        font-size: 16px;
+        font-weight: normal;
+        letter-spacing: 0.5px;
+        padding: 5px;
+        border-top: none;
+      }
+    }
+  }
+}
+
+.ReactModal__Overlay {
+  width: 50%;
+  transition: opacity 2000ms ease-in-out;
+}
+.ReactTable.-striped.-highlight {
+  width: 532px;
+}
+
+.fontSmall {
+  font-size: 12px;
+  width: 100%;
+  padding: 1px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.buttonFontSmall {
+  font-size: 12px;
+  width: 60px;
+  padding: 1px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.react-datepicker-wrapper {
+  display: block;
+  background-color: #fff;
+  border: 1 px solid black;
+  border-radius: 0.25rem;
+  width: 98.5%;
+  height: 35px;
+}
+
+@media screen and(max-width: 600px) {
+}
+.react-datepicker__input-container {
+  // display: block;
+  // background-color: #fff;
+  // border: 1 px solid black;
+  // border-radiyus: 0.25rem;
+  margin: 0px;
+  width: 100%;
+  height: 35px;
+  input {
+    display: block;
+    // background-color: #fff;
+    border: 1 px solid #ffffff;
+    border-radius: 0.25rem;
+    width: 100%;
+    height: 35px;
+  }
+}
+.dropdown-header {
+  font-size: 1rem;
+  color: #000000;
+  white-space: nowrap;
+}
+.errorMsg {
+  margin-top: 1%;
+  color: #f44336;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+.Select-input {
+  position: absolute !important;
+  width: 99%;
+}
+.Select-value-label {
+  display: none !important;
+}
+.Select-value {
+  position: relative !important;
+}
+.Select-menu-outer {
+  width: auto;
+  min-width: 95%;
+  text-align: left;
+}
+.Select-option {
+  white-space: nowrap;
+}
+.Select-control {
+  min-width: 98%;
+  width: 95%;
+  text-align: left;
+}
+button.css-1r4vtzz {
+  width: 100%;
+  position: absolute;
+}
+.modal-content {
+  padding: 10px;
+}
+.btn-secondary.site-button {
+  height: 40px;
+  width: auto;
+  margin: 3px;
+  border-radius: 4px;
+  background-color: #3582f5;
+  border: 1px solid #3582f5;
+  color: #ffffff;
+  font-size: 17px;
+  letter-spacing: 0.53px;
+  line-height: 19px;
+  .fa {
+    font-size: 18px;
+    font-weight: 300;
+  }
+}
+.btn-secondary.site-button:hover {
+  height: 40px;
+  width: auto;
+  margin: 3px;
+  border-radius: 4px;
+  background-color: #206bdb;
+  border: 2.5px solid #eff2f752;
+  color: #ffffff;
+  font-size: 17px;
+  letter-spacing: 0.53px;
+  line-height: 19px;
+  .fa {
+    font-size: 18px;
+    font-weight: 300;
+  }
+}
+.btn-secondary.site-button:disabled {
+  height: 40px;
+  width: auto;
+  margin: 3px;
+  border-radius: 4px;
+  background-color: #c5c4c1;
+  border: 1px solid #c5c4c1;
+  color: #ffffff;
+  font-size: 17px;
+  letter-spacing: 0.53px;
+  line-height: 19px;
+  .fa {
+    font-size: 18px;
+    font-weight: 300;
+  }
+}
+.btn-secondary.cancel-btn {
+  background-color: transparent;
+  border: 0px solid transparent;
+  color: #3582f5;
+  font-size: 16px;
+  letter-spacing: 0.53px;
+  line-height: 18px;
+  -webkit-appearance: none;
+  outline: none;
+  &:focus {
+    box-shadow: none;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.btn-secondary.link-btn {
+  background-color: transparent;
+  border: 0px solid transparent;
+  color: #00a3e2;
+  font-size: 14px;
+  letter-spacing: 0.29px;
+  line-height: 16px;
+  -webkit-appearance: none;
+  outline: none;
+  &:focus {
+    box-shadow: none;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+  .fa {
+    color: #00a3e2;
+    font-family: "Font Awesome 5 Pro";
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.33px;
+    line-height: 16px;
+    text-align: center;
+  }
+}
+.upload-btn {
+  padding: 8px 5px;
+}
+.btn-secondary.edit-btn,
+.upload-btn {
+  height: 40px;
+  width: auto;
+  color: #00a3e2;
+  border: 1px solid #00a3e2;
+  opacity: 0.8;
+  border-radius: 4px;
+  background: transparent;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 0.38px;
+  line-height: 18px;
+  text-align: center;
+  .fa {
+    font-size: 18px;
+    font-weight: 300;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+.logo-invoice {
+  width: 58%;
+  padding: 20px;
+}
+.hiddenVisibility {
+  visibility: hidden;
+}
+.adjustHeight {
+  margin-top: 10px;
+}
+.adjustMargin {
+  margin-top: 10px;
+  margin-left: -17px;
+}
+#checkbox {
+  width: 18px;
+  height: 18px;
+}
+.imgCard {
+  display: -webkit-inline-box;
+}
+.labelCard {
+  margin-left: 20px;
+}
+.scrollTable {
+  height: 60vh;
+}
+#addressDetails {
+  margin: -15px;
+  margin-top: 5px;
+}
+.invoiceLabels {
+  padding: 0.375rem 0.75rem;
+  color: #5c6873;
+  background-color: #fff;
+  border: none;
+}
+
+.callout-info {
+  border-bottom-color: #4dbd74;
+}
+.callout1 {
+  position: relative;
+  padding: 0 1rem;
+  margin: 1rem 0;
+  border-bottom: 4px solid #4dbd74;
+  border-radius: 0.25rem;
+}
+.wrapper {
+  text-align: center;
+  display: inline-block;
+  margin-right: 5px;
+}
+.paymentcheck {
+  width: 89px;
+  height: 29px;
+  padding: 7px;
+  margin-top: -12px;
+  margin-left: -30px;
+}
+.paddingRequired {
+  padding: 2rem;
+}
+.dashboard-font {
+  font-size: 18px;
+  color: #44484c;
+  font-weight: bold;
+}
+.angle-down {
+  color: #505355;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: right;
+  background: transparent;
+  border: none;
+}
+.amount-field {
+  text-align: right;
+}
+@media screen {
+  .generateInvoiceCard {
+    margin-left: 25%;
+    margin-right: 25%;
+    display: flex;
+    justify-content: space-between;
+
+    .logo-invoice {
+      width: 20%;
+    }
+  }
+}
+@media print {
+  @page {
+    margin: 0;
+  }
+  body {
+    margin: 1.6cm;
+  }
+  .generateInvoiceCard {
+    border: none;
+    margin-left: 0mm;
+    margin-right: 0mm;
+    margin-top: 1cm;
+    display: flex;
+    justify-content: space-between;
+
+    .logo-invoice {
+      width: 5cm;
+    }
+
+    .site-button {
+      display: none;
+    }
+
+    .phLable {
+      margin-top: 1cm;
+    }
+
+    .label {
+      font-size: 20pt;
+    }
+
+    label {
+      font-size: 18pt;
+    }
+
+    .invoice-table {
+      color: #000 !important;
+      thead > tr > th {
+        font-size: 18pt;
+        color: #000 !important;
+      }
+      tbody > tr > td {
+        font-size: 16pt;
+        color: #000 !important;
+      }
+    }
+  }
+}
+.removeArrow::-webkit-inner-spin-button,
+.removeArrow::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.nav-tabs {
+  border: none;
+  .nav-item {
+    margin-bottom: 0px;
+    border-bottom: 2px solid #c0c7c9;
+    .nav-link {
+      border: none;
+      color: #444547;
+      font-size: 13px;
+      padding: 0.5rem 0.7rem;
+      letter-spacing: 2.2px;
+      line-height: 18px;
+      text-align: center;
+      &.active {
+        border-bottom: 3px solid #0091c8;
+      }
+    }
+  }
+}
+.tab-content {
+  border: none;
+}
+.tab-content .tab-pane {
+  padding: 1rem 0rem;
+}
+span.errorCount {
+  background: red;
+  color: white;
+  border-radius: 50%;
+  height: 25px;
+  width: 26px;
+  display: inline-block;
+  position: absolute;
+  top: -10px;
+  font-weight: 500;
+  padding-top: 4px;
+  z-index: 5;
+}
+.progress-xs {
+  height: 10px;
+  border-radius: 5px;
+}
+.dueDate {
+  background: lightgrey;
+  margin-top: 1px;
+  margin-left: 2px;
+  padding: 6px;
+}
+.dueDateMargin {
+  margin-left: 14px;
+}
+.datePicker {
+  width: auto;
+  padding: 2.7px;
+  margin: 29px;
+  background-color: white;
+  border: none;
+}
+.totalAmountLabelMargin {
+  margin-left: 30px;
+}
+.totalAmountFieldMargin {
+  margin-left: 28px;
+}
+.logo-inv {
+  width: 200px;
+}
+.displayInvoice {
+  display: inline;
+}
+#advance-search-modal {
+  label {
+    height: 40px;
+    line-height: 34px;
+  }
+}
+/* webkit solution */
+::-webkit-input-placeholder {
+  text-align: left;
+}
+/* mozilla solution */
+input:-moz-placeholder {
+  text-align: left;
+}
+
+.dropbtn {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  .fa-ellipsis-v {
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  margin-left: -40px;
+  margin-top: -5px;
+  text-align: left;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 99;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.labelwrap {
+  max-width: 110px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.labelwrapreports {
+  max-width: 85px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#merchantAchReport {
+  .labelwrapreports {
+    max-width: 180px !important;
+  }
+}
+#achReportList {
+  .labelwrapreports {
+    max-width: 100px;
+  }
+}
+
+.labelwraptemplate {
+  max-width: 218px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.labelwraproles {
+  max-width: 378px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.labelwrapproducts {
+  max-width: 378px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.labelwrapcustomer {
+  max-width: 378px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.labelwraptransactions {
+  max-width: 165px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.toast-warning {
+  background-color: #0091c8 !important;
+  color: #fff !important;
+}
+.warn {
+  background-color: #0091c8 !important;
+  color: #fff !important;
+}
+.badge-warning {
+  color: #fff !important;
+}
+.toast-success {
+  color: #fff !important;
+}
+.toast-error {
+  color: #fff !important;
+}
+
+#ProductDetails {
+  padding-left: 18%;
+  padding-right: 18%;
+  margin-bottom: 0rem;
+  overflow-y: hidden;
+}
+
+.tabsModal {
+  overflow-y: hidden;
+}
+
+.selectheight {
+  height: 40px !important;
+  top: 39%;
+}
+.invoice-table {
+  color: #000 !important;
+  thead > tr > th {
+    font-weight: 600;
+    color: #000 !important;
+  }
+  tbody > tr > td {
+    color: #000 !important;
+  }
+}
+.react-datepicker-popper {
+  z-index: 2 !important;
+}
+.td-padding {
+  padding: 20px;
+}
+
+.CustomDatesSpan {
+  position: absolute;
+  color: red;
+  margin-left: 378px;
+  margin-top: 72px;
+}
+
+.CustomDates {
+  position: absolute;
+  margin-left: 65%;
+  color: red;
+  margin-top: 46px;
+}
+.highLight {
+  background-color: lightsteelblue;
+}
+.react-datepicker-wrapper {
+  width: 100%;
+}
+.react-datepicker__input-container {
+  width: 100%;
+}
+.react-datepicker__header {
+  background-color: #fff !important;
+}
+
+.react-datepicker__navigation--previous {
+  left: 10px;
+  border-right-color: #0091c8 !important;
+}
+.react-datepicker__navigation--next {
+  right: 10px;
+  border-left-color: #0091c8 !important;
+}
+.react-datepicker__navigation {
+  background: none;
+  line-height: 1.7rem;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  width: 0;
+  padding: 0;
+  border: 0.45rem solid transparent;
+  z-index: 1;
+  height: 10px;
+  width: 10px;
+  text-indent: -999em;
+  overflow: hidden;
+}
+input[type="checkbox"] {
+  visibility: hidden;
+}
+input[type="checkbox"]:checked + label::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 1.4ex;
+  height: 0.7ex;
+  background: rgba(0, 0, 0, 0);
+  top: 1.2ex;
+  left: 0.6ex;
+  border: 2px solid white;
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+input[type="checkbox"] {
+  line-height: 2.1ex;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  left: -999em;
+}
+
+input[type="checkbox"] + label {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="checkbox"] + label::before {
+  content: "";
+  display: inline-block;
+  vertical-align: -25%;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border: 1px solid rgb(166, 166, 166);
+  border-radius: 4px;
+  margin-right: 0.5em;
+}
+
+input[type="checkbox"]:checked + label::before {
+  background-color: #0091c8;
+}
+
+input[type="checkbox"]:disabled + label::before {
+  background-color: grey;
+}
+
+table.test {
+  background-color: white;
+}
+.cross-button {
+  color: #505355 !important;
+  font-size: 28px !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.58px !important;
+  line-height: 29px !important;
+  text-align: "center" !important;
+  margin-left: 20% !important;
+}
+
+.cross-button-background {
+  background: transparent;
+  border: none;
+  &:hover {
+    background: transparent;
+    border: none;
+  }
+}
+.page-important-data {
+  color: #003b5c;
+  font-size: 42px;
+  font-weight: 300;
+}
+.view-data {
+  opacity: 0.87;
+  color: #444547;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+.view-label {
+  opacity: 0.63;
+  color: #444547;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  text-align: right;
+}
+
+.done-btn {
+  height: 40px;
+  width: auto;
+  color: #00a3e2;
+  border: 1px solid #00a3e2;
+  opacity: 0.8;
+  border-radius: 4px;
+  background: transparent;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 0.38px;
+  line-height: 18px;
+  text-align: center;
+  &:hover {
+    background-color: inherit;
+    border: 1px solid #00a3e2;
+    color: #00a3e2;
+  }
+}
+
+//     /* remove the original arrow */
+// select {
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+//   cursor: pointer;
+//   -o-appearance: none;
+//   appearance: none;
+//   background-color: #fff;
+// }
+
+select::-ms-expand {
+  // display: none;
+}
+
+select + i.fa {
+  font-size: 28px;
+  font-weight: 300;
+  float: right;
+  margin-top: -2.5rem;
+  margin-right: 10px;
+  pointer-events: none;
+  /* everything after this is just to cover up the original arrow */
+  /* (for browsers that don't support the syntax used above) */
+  // background-color: white;
+  // color: #505355 !important;
+  // padding-right: 5px;
+  // &.disabled {
+  //   background-color: #e4e7ea !important;
+  // }
+
+  .miscComplaint {
+    padding-right: 14px !important;
+  }
+  .sortCursor {
+    cursor: pointer;
+    font-weight: 900 !important;
+  }
+  .miscComplaint {
+    padding-right: 14px !important;
+  }
+  .existingCustomer {
+    word-break: break-all;
+    align-items: center;
+  }
+  .truncate {
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .hidden {
+    display: none;
+  }
+  .label-checkbox {
+    color: #505355;
+  }
+  .label-checkbox-error {
+    color: #f44336;
+  }
+  .css-1hwfws3 {
+    outline: none;
+    overflow-x: auto;
+  }
+  .css-yk16xz-control:hover {
+    border: none;
+    border-color: transparent;
+  }
+  .css-2613qy-menu {
+    border-color: transparent !important;
+    border: none;
+    box-shadow: none;
+  }
+}
+.css-1pahdxg-control {
+  overflow: auto !important;
+  height: 48px !important;
+}
+.css-1pahdxg-control:hover {
+  height: 48px !important;
+}
+.css-1fhf3k1-control {
+  overflow: auto !important;
+  height: 45px !important;
+}
+.css-yk16xz-control {
+  overflow: auto !important;
+  height: 46px !important;
+}
+
+.phone-title {
+  position: absolute;
+  z-index: 1;
+  margin-left: 8px;
+  margin-top: -10px;
+  background: #fff;
+  padding-right: 7px;
+  padding-left: 7px;
+  font-size: 14px;
+  color: #505355;
+  line-height: 18px;
+}
+.css-1fhf3k1-control {
+  background-color: transparent !important;
+}
+
+.phone-title-error {
+  position: absolute;
+  z-index: 1;
+  margin-left: 8px;
+  margin-top: -10px;
+  background: #fff;
+  padding-right: 7px;
+  padding-left: 7px;
+  font-size: 14px;
+  color: #505355;
+  line-height: 18px;
+}
+
+.inv-buttons {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.sla-cross-button {
+  width: 1010px;
+}
+
+@media screen and(max-width : 600px) {
+  .sla-cross-button {
+    width: 110%;
+  }
+  .pagination {
+    padding-left: 0;
+    margin: 20px auto;
+    overflow: auto;
+    width: -webkit-fill-available;
+  }
+}
+
+@media screen and(max-width : 600px) {
+  .cancel-btnpayment {
+    text-align: center !important;
+  }
+}
+
+.cancel-btnpayment {
+  text-align: right;
+}
+
+@media screen and(max-width : 600px) {
+  .roleview {
+    text-align: right !important;
+    margin-left: 1% !important;
+  }
+}
+
+.roleview {
+  text-align: center;
+  margin-left: 80%;
+}
+
+.cancel-btnpayment {
+  text-align: right;
+}
+
+.invoicedash {
+  padding-top: "2px";
+}
+.invoicedash {
+  padding-top: "2px";
+}
+
+@media screen and(max-width : 600px) {
+  .invoicedash {
+    padding-top: "2px";
+    text-align: center !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .text-right {
+    text-align: center !important;
+  }
+  .text-right1 {
+    text-align: right !important;
+  }
+  .react-datepicker-wrapper {
+    margin-bottom: 5%;
+  }
+}
+
+.text-right1 {
+  text-align: right !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .page-heading {
+    text-align: center;
+  }
+  span.errorCount {
+    top: unset;
+  }
+}
+
+@media screen and(max-width : 600px) {
+  .roledelete {
+    text-align: left !important;
+  }
+  .recuringview {
+    margin-left: 111% !important;
+  }
+  .app-header .nav-item {
+    min-width: 60px;
+  }
+}
+.roledelete {
+  text-align: left;
+}
+
+.recuringview {
+  margin-left: 127%;
+}
+
+.app-header .nav-item {
+  min-width: 70px;
+}
+@media (max-width: 991.98px) {
+  .app-header .navbar-brand {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -70.5px;
+  }
+  .app-header .nav-item {
+    min-width: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-header .navbar-brand {
+    position: absolute;
+    top: 0;
+    left: 30%;
+    margin-left: -70.5px;
+  }
+  .input-img {
+    bottom: 10px;
+  }
+  .app-header .nav-item {
+    min-width: 60px;
+  }
+  .generateInvoiceCard {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  #payment-history-list #TransactionTypeCode #subMerchant-payment-list {
+    margin: 2px;
+  }
+  .exiInv {
+    margin-left: 24%;
+  }
+  .customerView {
+    margin-left: 50% !important;
+  }
+  .info-pricing-type .info-pricing-typetext {
+    margin-left: -180px !important;
+  }
+}
+
+.customerView {
+  margin-left: 17%;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .generateInvoiceCard {
+    margin-left: 0%;
+    margin-right: 0%;
+    height: 100vh;
+  }
+  .sla-cross-button {
+    width: 103%;
+  }
+  #payment-history-list #TransactionTypeCode #subMerchant-payment-list {
+    margin: 2px;
+  }
+  .info-pricing-type .info-pricing-typetext {
+    margin-left: -155px !important;
+  }
+}
+@media (min-width: 732px) {
+  #payment-history-list #TransactionTypeCode #subMerchant-payment-list {
+    margin: 2px;
+  }
+  .info-pricing-type .info-pricing-typetext {
+    margin-left: -155px !important;
+  }
+}
+
+.ellipse {
+  width: 130px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+}
+.content li {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.table thead tr th {
+  padding: 0;
+  letter-spacing: 0px;
+}
+.ellipse:hover {
+  width: auto;
+  border: 2px solid #eee;
+  box-shadow: 0px 3px 10px 0px black;
+  padding: 2px;
+  white-space: normal;
+  word-break: break-word;
+  z-index: 5;
+}
+.barMinHeight {
+  height: 150px !important;
+}
+#cardFeeProfile {
+  .table-bordered th,
+  .table-bordered td {
+    border: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+// .react-datepicker-wrapper {
+//   height: 48px;
+// }
+
+.input-img {
+  position: absolute;
+  z-index: 2;
+  bottom: 17px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  color: #505355;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.input-img-error {
+  position: absolute;
+  z-index: 2;
+  bottom: 31px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  color: #505355;
+  font-weight: normal;
+  font-size: 16px;
+}
+.button-right {
+  text-align: right;
+}
+.imp-header {
+  color: #505355;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  line-height: 21px;
+  margin-top: 4%;
+}
+#merchantList {
+  #processorId {
+    .css-1hwfws3{
+      overflow: auto !important;
+    }
+  }
+  .form-control {
+    color: #5c6873 !important;
+  }
+}
+
+.css-1hb7zxy-IndicatorsContainer {
+  -webkit-box-align: center;
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+

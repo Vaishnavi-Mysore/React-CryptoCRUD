@@ -1,0 +1,276 @@
+@mixin truncate($truncation-boundary) {
+  max-width: $truncation-boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.floating-form {
+  width: 320px;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.1rem rgba(6, 60, 92, 0.25);
+}
+/****  floating-Lable style start ****/
+
+.floating-label {
+  position: relative;
+  margin-top: 3%;
+}
+
+.floating-input,
+.floating-select {
+  font-size: 18px;
+  padding: 4px 15px;
+  display: block;
+  width: 100% !important;
+  height: 48px !important;
+  background-color: white;
+  border: 1px solid #505355;
+  margin-bottom: 2%;
+  border-radius: 4px;
+  &.disabled {
+    background-color: white !important;
+  }
+}
+.form-control:disabled{
+  background-color: white !important;
+  border: 1px solid #999a9b;
+  color: #999a9b !important;
+}
+.multi-select {
+  height: 48px !important;
+  padding: 0px !important;
+  margin-bottom: 0 !important;
+}
+
+.floating-input-error,
+.floating-select-error {
+  font-size: 18px;
+  padding: 4px 15px;
+  display: block;
+  width: 100% !important;
+  height: 48px !important;
+  margin-bottom: 2%;
+  background-color: transparent;
+  border: 2px solid #f44336;
+  border-radius: 4px;
+}
+
+.floating-input:focus,
+.floating-select:focus {
+  outline: none;
+  border: 1px solid #505355;
+}
+
+.floating-input-error:focus,
+.floating-select-error:focus {
+  outline: none;
+  border: 2px solid #f44336;
+}
+
+.label-input {
+  margin-left: 3ex;
+  margin-top: 0.7ex;
+  color: #505355 !important;
+  font-size: 18px;
+  font-weight: 400;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 5px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.floating-input:focus ~ label,
+.floating-input:not(:placeholder-shown) ~ label {
+  top: -15px;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 14px;
+  color: #505355;
+  z-index: 1;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.floating-input-error:focus ~ label,
+.floating-input-error:not(:placeholder-shown) ~ label {
+  top: -15px;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 14px;
+  color: #f44336;
+  z-index: 1;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.floating-select:focus ~ label,
+.floating-select:not([value=""]):valid ~ label {
+  top: -15px;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 14px;
+  color: #505355;
+  z-index: 1;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.floating-input:focus ~ label,
+.floating-input:not([value=""]):valid ~ label {
+  top: -15px;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 14px;
+  color: #505355;
+  z-index: 1;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.floating-input:disabled ~ label,
+.floating-input:disabled ~ label {
+  top: -15px;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 14px;
+  color: #505355;
+  z-index: 1;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.floating-input-error:focus ~ label,
+.floating-input-error:not([value=""]) ~ label {
+  top: -15px;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 14px;
+  color: #f44336;
+  z-index: 1;
+  background-color: white;
+  border-radius: 4px;
+}
+.floating-select-error:focus ~ label,
+.floating-select-error:not([value=""]):valid ~ label {
+  top: -15px;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 14px;
+  color: #f44336;
+  z-index: 1;
+  background-color: white;
+  border-radius: 4px;
+}
+
+/* active state */
+
+.floating-input:focus ~ .bar:before,
+.floating-input:focus ~ .bar:after,
+.floating-select:focus ~ .bar:before,
+.floating-select:focus ~ .bar:after {
+  width: 50%;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.floating-textarea {
+  min-height: 40px;
+  max-height: 260px;
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+/* highlighter */
+
+.highlight {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  top: 15%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* active state */
+
+.floating-input:focus ~ .highlight,
+.floating-select:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+
+.floating-credit {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  color: #aaa;
+  font-size: 13px;
+  font-family: arial, sans-serif;
+}
+
+.floating-credit a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+.floating-credit a:hover {
+  border-bottom: 1px dotted #f8f8f8;
+}
+
+.floating-heading {
+  position: fixed;
+  color: #aaa;
+  font-size: 20px;
+  font-family: arial, sans-serif;
+}
+
+.floating-input:focus,
+.floating-select:focus {
+  outline: none;
+  border: 2px solid #00a3e2;
+}
+
+@media screen and(max-width: 600px) {
+  .floating-label {
+    position: relative;
+    margin-top: 5%;
+    margin-left: 1%;
+  }
+  .label-input {
+    @include truncate(80%);
+  }
+  .create-merchant,
+  .User,
+  .role {
+    margin: 0%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .floating-label {
+    position: relative;
+    margin-top: 5%;
+  }
+  .label-input {
+    @include truncate(60%);
+  }
+  .create-merchant,
+  .User,
+  .role {
+    margin: 0%;
+  }
+}
